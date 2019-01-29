@@ -1,0 +1,19 @@
+import sys
+
+
+print('Name is:', sys.argv[1])
+print('PayRate:', int(sys.argv[2]))
+print('Hourly:', int(sys.argv[3]))
+Name = sys.argv[1]
+PayRate = int(sys.argv[2])
+Hour = int(sys.argv[3])
+
+if Hour <= 40:
+	pay = PayRate * Hour
+	print(pay)	
+else:
+	ovtime = Hour - 40
+	pay = 40 * PayRate
+	ovscale = ovtime * 1.5 * PayRate 
+	Total = pay + ovscale
+	print('This the Acctual Payment including OverTime', Total )
